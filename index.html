@@ -10,7 +10,7 @@
     </head>
     <body>
         <main id="main-doc">  
-            <section class="main-section">
+            <section class="main-section" id="What_is_Python?">
                 <header><h3 class="section-header">What is Python?</h3></header>
                 <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
                 <p>It is used for:</p>
@@ -22,7 +22,7 @@
                 </ul> 
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Install">
                 <header><h3 class="section-header">Python Install</h3></header>
                 <p>Many PCs and Macs will have python already installed.</p>
                 <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
@@ -35,9 +35,19 @@
                 <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
                 <p>The way to run a python file is like this on the command line:</p>
                 <code>C:\Users\Your Name>python helloworld.py</code>
+                <p>Where "helloworld.py" is the name of your python file.</p>
+                <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
+                <pre>
+                    print("Hello, World!")
+                </pre>
+                <p>Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:</p>
+                <code>C:\Users\Your Name>python helloworld.py</code>
+                <p>The output should read:</p>
+                <code>Hello, World!</code>
+                <p>Congratulations, you have written and executed your first Python program!</p>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Syntax">
                 <header><h3 class="section-header">Python Syntax</h3></header>
                 <h4 class="section-subtitle">Indentation</h4>
                 <p>Indentation refers to the spaces at the beginning of a code line.</p>
@@ -66,7 +76,7 @@
                 </pre>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Variables">
                 <header><h3 class="section-header">Python Variables</h3></header>
                 <h4 class="section-subtitle">Creating Variables</h4>
                 <p>Python has no command for declaring a variable.</p>
@@ -112,7 +122,7 @@
                 </pre>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Conditions_and_If_statements">
                 <header><h3 class="section-header">Python Conditions and If statements</h3></header>
                 <h4 class="section-subtitle">Conditionals</h4>
                 <p>Python supports the usual logical conditions from mathematics:</p>
@@ -163,7 +173,7 @@
                 <p>In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".</p>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Loops">
                 <header><h3 class="section-header">Python Loops</h3></header>
                 <p>Python has two primitive loop commands:</p>
                 <ul>
@@ -211,7 +221,7 @@
                 <p>The <span class="keyword-span">for</span> loop does not require an indexing variable to set beforehand.</p>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_Functions">
                 <header><h3 class="section-header">Python Functions</h3></header>
                 <p>A function is a block of code which only runs when it is called.</p>
                 <p>You can pass data, known as parameters, into a function.</p>
@@ -247,7 +257,7 @@
                 </pre>
             </section>
 
-            <section class="main-section">
+            <section class="main-section" id="Python_User_Input">
                 <header><h3 class="section-header">Python User Input</h3></header>
                 <p>Python allows for user input. That means we are able to ask the user for input.</p>
                 <p>The method is a bit different in Python 3.6 than Python 2.7.</p>
@@ -265,20 +275,19 @@
                     print("Username is: " + username)
                 </pre>
                 <p>Python stops executing when it comes to the <span class="keyword-span">input()</span> function, and continues when the user has given some input.</p>
-
-            </section>
-
-            <section class="main-section">
             </section>
             
             <nav id="navbar">
                 <header><h1>Python Basics Documentation</h1></header>
 
-                <a href="" class="nav-link"></a>
-                <a href="" class="nav-link"></a>
-                <a href="" class="nav-link"></a>
-                <a href="" class="nav-link"></a>
-                <a href="" class="nav-link"></a>
+                <a href="#What_is_Python?" class="nav-link">What is Python?</a>
+                <a href="#Python_Install" class="nav-link">Python Install</a>
+                <a href="#Python_Syntax" class="nav-link">Python Syntax</a>
+                <a href="#Python_Variables" class="nav-link">Python Variables</a>
+                <a href="#Python_Conditions_and_If_statements" class="nav-link">Python Conditions and If statements</a>
+                <a href="#Python_Loops" class="nav-link">Python Loops</a>
+                <a href="#Python_Functions" class="nav-link">Python Functions</a>
+                <a href="#Python_User_Input" class="nav-link">Python User Input</a>
                 
             </nav>
         </main>
