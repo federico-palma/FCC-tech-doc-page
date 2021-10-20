@@ -3,14 +3,285 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Python Basics Doc</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        
-        <script src="" async defer></script>
+        <main id="main-doc">  
+            <section class="main-section">
+                <header><h3 class="section-header">What is Python?</h3></header>
+                <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+                <p>It is used for:</p>
+                <ul>
+                    <li>web development (server-side),</li>
+                    <li>software development,</li>
+                    <li>mathematics,</li>
+                    <li>system scripting.</li>
+                </ul> 
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Install</h3></header>
+                <p>Many PCs and Macs will have python already installed.</p>
+                <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
+                <code>C:\Users\Your Name>python --version</code>
+                <p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
+                <code>python --version</code>
+                <p>If you find that you do not have python installed on your computer, then you can download it for free from the following website: <a href="https://www.python.org/" target="_blank">https://www.python.org/</a>.</p>
+                
+                <h4>How to run Python</h4>
+                <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
+                <p>The way to run a python file is like this on the command line:</p>
+                <code>C:\Users\Your Name>python helloworld.py</code>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Syntax</h3></header>
+                <h4 class="section-subtitle">Indentation</h4>
+                <p>Indentation refers to the spaces at the beginning of a code line.</p>
+                <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+                <p>Python uses indentation to indicate a block of code.</p>
+                <pre>
+                    if 5 > 2:
+                        print("Five is greater than two!")
+                </pre>
+                <p>Python will give you an error if you skip the indentation:</p>
+                <pre>
+                    if 5 > 2:
+                    print("Five is greater than two!")
+                </pre>
+
+                <h4 class="section-subtitle">Comments</h4>
+                <p>Comments can be used to: </p>
+                <ul>
+                    <li>Explain Python code.</li>
+                    <li>Make the code more readable.</li>
+                    <li>Prevent execution when testing code.</li>
+                </ul>
+                <p>Comments starts with a #, and Python will ignore them:</p>
+                <pre>
+                    #This is a comment
+                </pre>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Variables</h3></header>
+                <h4 class="section-subtitle">Creating Variables</h4>
+                <p>Python has no command for declaring a variable.</p>
+                <p>A variable is created the moment you first assign a value to it.</p>
+                <p>Variable names are case-sensitive.</p>
+                <pre>
+                    x = 5
+                    y = "John"
+                    print(x)
+                    print(y)
+                </pre>
+                <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+                <pre>
+                    x = 4       #x is of type int
+                    x = "Sally" #x is now of type str
+                    print(x)
+                </pre>
+
+                <h4 class="section-subtitle">Variable types</h4>
+                <p>Variables can store data of different types, and different types can do different things.</p>
+                <p>Python has the following data types built-in by default, in these categories:</p>
+                
+                <ul>
+                    <li>Text Type:  str</li>
+                    <li>Numeric Types:  int, float, complex</li>
+                    <li>Sequence Types: list, tuple, range</li>
+                    <li>Mapping Type:   dict</li>
+                    <li>Set Types:  set, frozenset</li>
+                    <li>Boolean Type:	bool</li>
+                    <li>Binary Types:	bytes, bytearray, memoryview</li>
+                </ul>
+                <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+                <pre>
+                    x = 4       # x is of type int
+                    x = "Sally" # x is now of type str
+                    print(x)  
+                </pre>
+                <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+                <pre>
+                    x = str(3)    # x will be '3'
+                    y = int(3)    # y will be 3
+                    z = float(3)  # z will be 3.0
+                </pre>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Conditions and If statements</h3></header>
+                <h4 class="section-subtitle">Conditionals</h4>
+                <p>Python supports the usual logical conditions from mathematics:</p>
+                <ul>
+                    <li>Equals: a == b</li>
+                    <li>Not Equals: a != b</li>
+                    <li>Less than: a < b</li>
+                    <li>Less than or equal to: a <= b</li>
+                    <li>Greater than: a > b</li>
+                    <li>Greater than or equal to: a >= b</li>
+                </ul>
+                <p>These conditions can be used in several ways, most commonly in <span class="keyword-span">if</span> statements and <span class="keyword-span">loops</span>.</p>
+
+                <h4 class="section-subtitle">If statements</h4>
+                <p>An "if statement" is written by using the <span class="keyword-span">if</span> keyword.</p>
+                <pre>
+                    a = 33
+                    b = 200
+                    if b > a:
+                        print("b is greater than a")
+                </pre>
+                <p>In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".</p>
+
+                <h4 class="section-subtitle">Elif</h4>
+                <p>The <span class="keyword-span">elif</span> keyword is pythons way of saying "if the previous conditions were not true, then try this condition".</p>
+                <pre>
+                    a = 33
+                    b = 33
+                    if b > a:
+                        print("b is greater than a")
+                    elif a == b:
+                        print("a and b are equal")
+                </pre>
+                <p>In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".</p>
+            
+                <h4 class="section-subtitle">Else</h4>
+                <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
+                <pre>
+                    a = 200
+                    b = 33
+                    if b > a:
+                        print("b is greater than a")
+                    elif a == b:
+                        print("a and b are equal")
+                    else:
+                        print("a is greater than b")
+                </pre>
+                <p>In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".</p>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Loops</h3></header>
+                <p>Python has two primitive loop commands:</p>
+                <ul>
+                    <li>while loops</li>
+                    <li>for loops</li>
+                </ul>
+
+                <h4 class="section-subtitle">While loop</h4>
+                <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+                <pre>
+                    i = 1
+                    while i < 6:
+                        print(i)
+                        i += 1
+                </pre>
+                <p>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1. Remember to increment i, or else the loop will continue forever.</p>
+                <p>With the <span class="keyword-span">break</span> statement we can stop the loop even if the while condition is true:</p>
+                <pre>
+                    i = 1
+                    while i < 6:
+                        print(i)
+                        if i == 3:
+                            break
+                        i += 1
+                </pre>
+                <p>With the <span class="keyword-span">continue</span> statement we can stop the current iteration, and continue with the next:</p>
+                <pre>
+                    i = 0
+                    while i < 6:
+                        i += 1
+                        if i == 3:
+                            continue
+                        print(i)
+                </pre>
+
+                <h4 class="section-subtitle">For loops</h4>
+                <p>A <span class="keyword-span">for</span> loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
+                <p>This is less like the <span class="keyword-span">for</span> keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.</p>
+                <p>With the <span class="keyword-span">for</span> loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+                <pre>
+                    fruits = ["apple", "banana", "cherry"]
+                    for x in fruits:
+                        print(x)
+                </pre>
+                <p>The <span class="keyword-span">for</span> loop does not require an indexing variable to set beforehand.</p>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python Functions</h3></header>
+                <p>A function is a block of code which only runs when it is called.</p>
+                <p>You can pass data, known as parameters, into a function.</p>
+                <p>A function can return data as a result.</p>
+
+                <h4 class="section-subtitle">Creating a Function</h4>
+                <p>In Python a function is defined using the <span class="keyword-span">def</span> keyword:</p>
+                <pre>
+                    def my_function():
+                        print("Hello from a function")
+                </pre>
+
+                <h4 class="section-subtitle">Calling a Function</h4>
+                <p>To call a function, use the function name followed by parenthesis:</p>
+                <pre>
+                    def my_function():
+                        print("Hello from a function")
+
+                    my_function()
+                </pre>
+
+                <h4 class="section-subtitle">Arguments</h4>
+                <p>Information can be passed into functions as arguments.</p>
+                <p>Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.</p>
+                <p>The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:</p>
+                <pre>
+                    def my_function(fname):
+                        print(fname + " Refsnes")
+
+                    my_function("Emil")
+                    my_function("Tobias")
+                    my_function("Linus")
+                </pre>
+            </section>
+
+            <section class="main-section">
+                <header><h3 class="section-header">Python User Input</h3></header>
+                <p>Python allows for user input. That means we are able to ask the user for input.</p>
+                <p>The method is a bit different in Python 3.6 than Python 2.7.</p>
+                <p>Python 3.6 uses the <span class="keyword-span">input()</span> method.</p>
+                <p>Python 2.7 uses the <span class="keyword-span">raw_input()</span> method.</p>
+                <p>The following example asks for the username, and when you entered the username, it gets printed on the screen:</p>
+                <p>Python 3.6</p>
+                <pre>
+                    username = input("Enter username:")
+                    print("Username is: " + username)
+                </pre>
+                <p>Python 2.7</p>
+                <pre>
+                    username = raw_input("Enter username:")
+                    print("Username is: " + username)
+                </pre>
+                <p>Python stops executing when it comes to the <span class="keyword-span">input()</span> function, and continues when the user has given some input.</p>
+
+            </section>
+
+            <section class="main-section">
+            </section>
+            
+            <nav id="navbar">
+                <header><h1>Python Basics Documentation</h1></header>
+
+                <a href="" class="nav-link"></a>
+                <a href="" class="nav-link"></a>
+                <a href="" class="nav-link"></a>
+                <a href="" class="nav-link"></a>
+                <a href="" class="nav-link"></a>
+                
+            </nav>
+        </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>
