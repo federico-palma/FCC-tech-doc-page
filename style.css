@@ -20,6 +20,10 @@ main{
     background-color: lightgray;
 }
 
+nav ol{
+    overflow: scroll;
+}
+
 nav a{
     display: block;
     border-top: grey 2px solid;
@@ -38,3 +42,16 @@ nav a:visited{
 nav li{
     list-style: none;
 }
+
+@media only screen and (max-width: 700px) {
+    #navbar{
+        position: static;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        
+    }
+  }
