@@ -14,7 +14,6 @@
     width: fit-content;
     height: 100%;
     border-right: grey 5px solid;
-    background-color: lightgray;
 }
 
 nav h1 {
@@ -101,8 +100,14 @@ pre {
         height: 300px;
         margin: 0px;
         padding: 0px;
-
+        border-right: none;
     }
+
+    nav ol{
+        border-top: 2px black solid;
+        border-bottom: 2px black solid;
+    }
+
     main {
         margin: 10px auto;
     }
