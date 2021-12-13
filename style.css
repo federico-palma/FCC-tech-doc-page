@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Main Section */
-main {
-    margin: 10px auto;
-    margin-left: 340px;
-}
-
 /* Navbar Section */
 #navbar{
     position: fixed;
@@ -23,7 +17,7 @@ main {
 
 nav h1 {
     text-align: center;
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 nav ol{
@@ -35,8 +29,11 @@ nav li{
     list-style: none;
     border-top: grey 2px solid;
     font-size: 1.2rem;
-    margin: 10px 5px;
-    padding: 10px 5px;
+    padding: 20px 5px;
+}
+
+nav li:last-child {
+    border-bottom: grey 2px solid;
 }
 
 nav a{
@@ -53,12 +50,20 @@ nav a:visited{
     color: black
 }
 
+/* Main Section */
+main {
+    margin: 10px auto;
+    margin-left: 340px;
+}
+
+section {
+    border-top: 1px black solid;
+}
+
 /* Media Query */
 @media screen and (max-width: 700px) {
     #navbar{
         position: static;
-        left: 0;
-        top: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
