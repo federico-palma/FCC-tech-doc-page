@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
 }
 
 /* Navbar Section */
@@ -28,7 +30,7 @@ nav ol{
 nav li{
     list-style: none;
     border-top: grey 2px solid;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 20px 5px;
 }
 
@@ -53,7 +55,7 @@ nav a:visited{
 /* Main Section */
 main {
     margin: 10px auto;
-    margin-left: 340px;
+    margin-left: 400px;
 }
 
 section {
@@ -73,15 +75,20 @@ section p {
     font-size: 1.1em;
 }
 
+section li {
+    font-size: 1.1em;
+}
+
 code {
-    padding: 7px;
+    padding: 7px 15px;
     background-color: lightgray;
 }
 
 pre {
     padding: 10px;
-    background-color: lightgray;
+    padding-right: 100px;
     width: fit-content;
+    border: solid lightgray 1px;
 }
 
 /* Media Query */
